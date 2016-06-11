@@ -62,7 +62,7 @@ public class SeleniumMain {
             // ex.printStackTrace();
         }
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
-		WebDriver driver = new RemoteWebDriver(new URL("http://ec2-54-87-132-41.compute-1.amazonaws.com:4444/wd/hub"), capability);
+		WebDriver driver = new RemoteWebDriver(new URL("http://ec2-54-197-7-11.compute-1.amazonaws.com:4444/wd/hub"), capability);
 		
 		// And now use this to visit the app
         driver.get("http://" +DNS+":8080/hello_world5-"+ appVersion + "/");
@@ -70,7 +70,7 @@ public class SeleniumMain {
         // Find the text input element by its name
         WebElement element = driver.findElement(By.tagName("h2"));
         String result = element.getText();
-        if (result.contains("Hello Demo! The even number is:")){
+        if (result.contains("Hello Hammid! The even number is:")){
         	System.out.println("It's working!");
         	System.out.println(result);
         	System.exit(0);
